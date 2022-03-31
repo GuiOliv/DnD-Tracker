@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DnD_Tracker.FormsUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DnD_Tracker
+namespace DnD_Tracker.Forms.ChildForms
 {
-    public partial class Form1 : Form
+    public partial class Missions : Form
     {
-        public Form1()
+        public Missions()
         {
             InitializeComponent();
         }

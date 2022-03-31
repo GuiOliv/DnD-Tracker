@@ -1,7 +1,7 @@
 ﻿
-namespace DnD_Tracker
+namespace DnD_Tracker.Forms.ChildForms
 {
-    partial class Form1
+    partial class Missions
     {
         /// <summary>
         /// Required designer variable.
@@ -32,10 +32,9 @@ namespace DnD_Tracker
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Text = "Missions";
         }
 
         #endregion
     }
 }
-
