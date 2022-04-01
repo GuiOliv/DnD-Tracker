@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DnD_Tracker.Components
 {
-    class Msn
+    public class Msn
     {
     }
 }

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DnD_Tracker.Components;
 
 namespace DnD_Tracker.Forms.ChildForms
 {
@@ -16,6 +17,7 @@ namespace DnD_Tracker.Forms.ChildForms
         public Characters()
         {
             InitializeComponent();
+            listOfPlayers.DataSource = Chr.ListOfPlayers;
         }
 
         public void OpenChildForm(Form childForm, object btnSender)

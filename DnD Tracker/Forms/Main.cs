@@ -127,9 +127,6 @@ namespace DnD_Tracker.Forms
             }
             Reset();
         }
-
-        #endregion
-
         private void Main_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -155,5 +152,8 @@ namespace DnD_Tracker.Forms
         {
             this.WindowState = FormWindowState.Minimized;
         }
+        #endregion
+
+        
     }
 }
