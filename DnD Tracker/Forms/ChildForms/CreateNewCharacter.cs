@@ -17,9 +17,11 @@ namespace DnD_Tracker.Forms.ChildForms
     {
         string CharacterSheetFileName { get; set; }
 
-        public CreateNewCharacter()
+        private Characters ParentForm;
+        public CreateNewCharacter(Characters parentForm)
         {
             InitializeComponent();
+            ParentForm = parentForm;
             addClass.DataSource = Enum.GetValues(typeof(Classes));
             addRace.DataSource = Enum.GetValues(typeof(Races));
         }
@@ -66,7 +68,16 @@ namespace DnD_Tracker.Forms.ChildForms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Chr NewPLayer = new Chr(addCharacterName.Text, addPlayerName.Text, (Classes)Enum.Parse(typeof(Classes), addClass.SelectedText), (Races)Enum.Parse(typeof(Races), addRace.SelectedText), listBoxSpells.Items.Cast<String>().ToList(), CharacterSheetFileName);
+            try
+            {
+                Chr NewPLayer = new Chr(addCharacterName.Text, addPlayerName.Text, (Classes)Enum.Parse(typeof(Classes), addClass.GetItemText(addClass.SelectedItem)), (Races)Enum.Parse(typeof(Races), addRace.GetItemText(addRace.SelectedItem)), listBoxSpells.Items.Cast<String>().ToList(), CharacterSheetFileName);
+                Characters.CloseChildForm(this);
+                ParentForm.LoadPlayerList();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Every field must be completed");
+            }
         }
     }
 }

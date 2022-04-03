@@ -17,25 +17,47 @@ namespace DnD_Tracker.Forms.ChildForms
         public Characters()
         {
             InitializeComponent();
-            listOfPlayers.DataSource = Chr.ListOfPlayers;
+            LoadPlayerList();
         }
-
+        #region ChildForm
         public void OpenChildForm(Form childForm, object btnSender)
         {
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
             childForm.BackColor = this.BackColor;
-            this.panel1.Controls.Add(childForm);
-            this.panel1.Tag = childForm;
+            this.panelChild.Controls.Add(childForm);
+            this.panelChild.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
+        public static void CloseChildForm(Form childForm)
+        {
+            childForm.Close();
+        }
+
+        #endregion
+
         #region Buttons
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new CreateNewCharacter(), sender);
+            OpenChildForm(new CreateNewCharacter(this), sender);
         }
         #endregion
+
+        public void LoadPlayerList()
+        {
+            int count = 0;
+            foreach (var panel in panelChild.Controls.OfType<Panel>().OrderBy(w => w.Name))
+            {
+                if (count != Chr.ListOfPlayers.Count && Chr.ListOfPlayers != null)
+                {
+                    panel.Visible = true;
+                    panel.Controls.OfType<Label>().First().Text = Chr.ListOfPlayers[count].NameCharacter;
+                    count++;
+                }
+                break;
+            }
+        }
     }
 }

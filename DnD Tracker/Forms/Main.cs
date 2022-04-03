@@ -110,7 +110,7 @@ namespace DnD_Tracker.Forms
         }
         #endregion
         #region Buttons
-        private void buttonCharacters_Click(object sender, EventArgs e)
+        public void buttonCharacters_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Characters(), sender);
         }
