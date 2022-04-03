@@ -35,6 +35,8 @@ namespace DnD_Tracker.Forms.ChildForms
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.addRace = new System.Windows.Forms.ComboBox();
+            this.addClass = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAddSpell = new System.Windows.Forms.Button();
@@ -49,8 +51,6 @@ namespace DnD_Tracker.Forms.ChildForms
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.addClass = new System.Windows.Forms.ComboBox();
-            this.addRace = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -127,6 +127,22 @@ namespace DnD_Tracker.Forms.ChildForms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1043, 1073);
             this.panel1.TabIndex = 5;
+            // 
+            // addRace
+            // 
+            this.addRace.FormattingEnabled = true;
+            this.addRace.Location = new System.Drawing.Point(416, 273);
+            this.addRace.Name = "addRace";
+            this.addRace.Size = new System.Drawing.Size(513, 39);
+            this.addRace.TabIndex = 10;
+            // 
+            // addClass
+            // 
+            this.addClass.FormattingEnabled = true;
+            this.addClass.Location = new System.Drawing.Point(416, 193);
+            this.addClass.Name = "addClass";
+            this.addClass.Size = new System.Drawing.Size(513, 39);
+            this.addClass.TabIndex = 9;
             // 
             // panel2
             // 
@@ -269,7 +285,7 @@ namespace DnD_Tracker.Forms.ChildForms
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(682, 438);
+            this.button2.Location = new System.Drawing.Point(352, 231);
             this.button2.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(368, 72);
@@ -277,22 +293,6 @@ namespace DnD_Tracker.Forms.ChildForms
             this.button2.Text = "Finish";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // addClass
-            // 
-            this.addClass.FormattingEnabled = true;
-            this.addClass.Location = new System.Drawing.Point(416, 193);
-            this.addClass.Name = "addClass";
-            this.addClass.Size = new System.Drawing.Size(513, 39);
-            this.addClass.TabIndex = 9;
-            // 
-            // addRace
-            // 
-            this.addRace.FormattingEnabled = true;
-            this.addRace.Location = new System.Drawing.Point(416, 273);
-            this.addRace.Name = "addRace";
-            this.addRace.Size = new System.Drawing.Size(513, 39);
-            this.addRace.TabIndex = 10;
             // 
             // CreateNewCharacter
             // 

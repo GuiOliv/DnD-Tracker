@@ -131,6 +131,7 @@ namespace DnD_Tracker.Forms.ChildForms
             this.button13.TabIndex = 1;
             this.button13.Text = "Details";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // label7
             // 
@@ -175,6 +176,7 @@ namespace DnD_Tracker.Forms.ChildForms
             this.button11.TabIndex = 1;
             this.button11.Text = "Details";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // label6
             // 
@@ -219,6 +221,7 @@ namespace DnD_Tracker.Forms.ChildForms
             this.button9.TabIndex = 1;
             this.button9.Text = "Details";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // label5
             // 
@@ -263,6 +266,7 @@ namespace DnD_Tracker.Forms.ChildForms
             this.button7.TabIndex = 1;
             this.button7.Text = "Details";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // label4
             // 
@@ -307,6 +311,7 @@ namespace DnD_Tracker.Forms.ChildForms
             this.button5.TabIndex = 1;
             this.button5.Text = "Details";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label3
             // 
@@ -351,6 +356,7 @@ namespace DnD_Tracker.Forms.ChildForms
             this.button3.TabIndex = 1;
             this.button3.Text = "Details";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label2
             // 
@@ -384,6 +390,7 @@ namespace DnD_Tracker.Forms.ChildForms
             this.btnRemove.TabIndex = 2;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnDetails
             // 
@@ -395,6 +402,7 @@ namespace DnD_Tracker.Forms.ChildForms
             this.btnDetails.TabIndex = 1;
             this.btnDetails.Text = "Details";
             this.btnDetails.UseVisualStyleBackColor = true;
+            this.btnDetails.Click += new System.EventHandler(this.btnDetails_Click);
             // 
             // label1
             // 

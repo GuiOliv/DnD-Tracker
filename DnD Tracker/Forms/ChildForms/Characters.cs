@@ -56,8 +56,67 @@ namespace DnD_Tracker.Forms.ChildForms
                     panel.Controls.OfType<Label>().First().Text = Chr.ListOfPlayers[count].NameCharacter;
                     count++;
                 }
-                break;
+                else
+                {
+                    panel.Visible = false;
+                }
             }
+        }
+
+        private void btnDetails_Click(object sender, EventArgs e)
+        {
+            Chr player = Chr.ListOfPlayers.Where(w => w.NameCharacter == label1.Text).First();
+            OpenDetails(player);
+        }
+        
+        public void OpenDetails(Chr plr)
+        {
+            Player pl = new Player(plr);
+            pl.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Chr player = Chr.ListOfPlayers.Where(w => w.NameCharacter == label2.Text).First();
+            OpenDetails(player);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Chr player = Chr.ListOfPlayers.Where(w => w.NameCharacter == label3.Text).First();
+            OpenDetails(player);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Chr player = Chr.ListOfPlayers.Where(w => w.NameCharacter == label4.Text).First();
+            OpenDetails(player);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Chr player = Chr.ListOfPlayers.Where(w => w.NameCharacter == label5.Text).First();
+            OpenDetails(player);
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Chr player = Chr.ListOfPlayers.Where(w => w.NameCharacter == label6.Text).First();
+            OpenDetails(player);
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            Chr player = Chr.ListOfPlayers.Where(w => w.NameCharacter == label7.Text).First();
+            OpenDetails(player);
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            Chr player = Chr.ListOfPlayers.Where(w => w.NameCharacter == label1.Text).First();
+            Chr.ListOfPlayers.Remove(player);
+            player = null;
+            LoadPlayerList();
         }
     }
 }
