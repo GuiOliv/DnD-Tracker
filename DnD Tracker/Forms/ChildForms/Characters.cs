@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DnD_Tracker.Components;
+using DnD_Tracker.UserControls;
 
 namespace DnD_Tracker.Forms.ChildForms
 {
@@ -45,78 +46,92 @@ namespace DnD_Tracker.Forms.ChildForms
         }
         #endregion
 
+        //public void LoadPlayerList()
+        //{
+        //    int count = 0;
+        //    foreach (var panel in panelChild.Controls.OfType<Panel>().OrderBy(w => w.Name))
+        //    {
+        //        if (count != Chr.ListOfPlayers.Count && Chr.ListOfPlayers != null)
+        //        {
+        //            panel.Visible = true;
+        //            panel.Controls.OfType<Label>().First().Text = Chr.ListOfPlayers[count].NameCharacter;
+        //            count++;
+        //        }
+        //        else
+        //        {
+        //            panel.Visible = false;
+        //        }
+        //    }
+        //}
         public void LoadPlayerList()
         {
-            int count = 0;
-            foreach (var panel in panelChild.Controls.OfType<Panel>().OrderBy(w => w.Name))
+            foreach (var player in Chr.ListOfPlayers)
             {
-                if (count != Chr.ListOfPlayers.Count && Chr.ListOfPlayers != null)
-                {
-                    panel.Visible = true;
-                    panel.Controls.OfType<Label>().First().Text = Chr.ListOfPlayers[count].NameCharacter;
-                    count++;
-                }
-                else
-                {
-                    panel.Visible = false;
-                }
+                //characterControl1 = new CharacterControl(player);
+                //listView1.Controls.Add(characterControl1);
+                ListofPlayers.Controls.Add(new CharacterControl(player));
             }
         }
 
-        private void btnDetails_Click(object sender, EventArgs e)
-        {
-            Chr player = Chr.ListOfPlayers.Where(w => w.NameCharacter == label1.Text).First();
-            OpenDetails(player);
-        }
+        //private void btnDetails_Click(object sender, EventArgs e)
+        //{
+        //    Chr player = Chr.ListOfPlayers.Where(w => w.NameCharacter == label1.Text).First();
+        //    OpenDetails(player);
+        //}
         
-        public void OpenDetails(Chr plr)
-        {
-            Player pl = new Player(plr);
-            pl.Show();
-        }
+        //public void OpenDetails(Chr plr)
+        //{
+        //    Player pl = new Player(plr);
+        //    pl.Show();
+        //}
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Chr player = Chr.ListOfPlayers.Where(w => w.NameCharacter == label2.Text).First();
-            OpenDetails(player);
-        }
+        //private void button3_Click(object sender, EventArgs e)
+        //{
+        //    Chr player = Chr.ListOfPlayers.Where(w => w.NameCharacter == label2.Text).First();
+        //    OpenDetails(player);
+        //}
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Chr player = Chr.ListOfPlayers.Where(w => w.NameCharacter == label3.Text).First();
-            OpenDetails(player);
-        }
+        //private void button5_Click(object sender, EventArgs e)
+        //{
+        //    Chr player = Chr.ListOfPlayers.Where(w => w.NameCharacter == label3.Text).First();
+        //    OpenDetails(player);
+        //}
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            Chr player = Chr.ListOfPlayers.Where(w => w.NameCharacter == label4.Text).First();
-            OpenDetails(player);
-        }
+        //private void button7_Click(object sender, EventArgs e)
+        //{
+        //    Chr player = Chr.ListOfPlayers.Where(w => w.NameCharacter == label4.Text).First();
+        //    OpenDetails(player);
+        //}
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-            Chr player = Chr.ListOfPlayers.Where(w => w.NameCharacter == label5.Text).First();
-            OpenDetails(player);
-        }
+        //private void button9_Click(object sender, EventArgs e)
+        //{
+        //    Chr player = Chr.ListOfPlayers.Where(w => w.NameCharacter == label5.Text).First();
+        //    OpenDetails(player);
+        //}
 
-        private void button11_Click(object sender, EventArgs e)
-        {
-            Chr player = Chr.ListOfPlayers.Where(w => w.NameCharacter == label6.Text).First();
-            OpenDetails(player);
-        }
+        //private void button11_Click(object sender, EventArgs e)
+        //{
+        //    Chr player = Chr.ListOfPlayers.Where(w => w.NameCharacter == label6.Text).First();
+        //    OpenDetails(player);
+        //}
 
-        private void button13_Click(object sender, EventArgs e)
-        {
-            Chr player = Chr.ListOfPlayers.Where(w => w.NameCharacter == label7.Text).First();
-            OpenDetails(player);
-        }
+        //private void button13_Click(object sender, EventArgs e)
+        //{
+        //    Chr player = Chr.ListOfPlayers.Where(w => w.NameCharacter == label7.Text).First();
+        //    OpenDetails(player);
+        //}
 
-        private void btnRemove_Click(object sender, EventArgs e)
+        //private void btnRemove_Click(object sender, EventArgs e)
+        //{
+        //    Chr player = Chr.ListOfPlayers.Where(w => w.NameCharacter == label1.Text).First();
+        //    Chr.ListOfPlayers.Remove(player);
+        //    player = null;
+        //    LoadPlayerList();
+        //}
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Chr player = Chr.ListOfPlayers.Where(w => w.NameCharacter == label1.Text).First();
-            Chr.ListOfPlayers.Remove(player);
-            player = null;
-            LoadPlayerList();
+
         }
     }
 }

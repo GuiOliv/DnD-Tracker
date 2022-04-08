@@ -156,6 +156,7 @@ namespace DnD_Tracker.Forms.ChildForms
             this.XPTextBox.Name = "XPTextBox";
             this.XPTextBox.Size = new System.Drawing.Size(131, 38);
             this.XPTextBox.TabIndex = 19;
+            this.XPTextBox.Text = "100";
             // 
             // XPLoader
             // 
@@ -185,6 +186,7 @@ namespace DnD_Tracker.Forms.ChildForms
             this.MoneyTextBox.Name = "MoneyTextBox";
             this.MoneyTextBox.Size = new System.Drawing.Size(120, 38);
             this.MoneyTextBox.TabIndex = 16;
+            this.MoneyTextBox.Text = "100";
             // 
             // comboBoxMoney
             // 
