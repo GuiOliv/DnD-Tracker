@@ -15,11 +15,13 @@ namespace DnD_Tracker.UserControls
     public partial class CharacterControl : UserControl
     {
         Chr Player1 { get; set; }
-        public CharacterControl(Chr chr)
+        Characters Characters { get; set; }
+        public CharacterControl(Chr chr, Characters characters)
         {
             InitializeComponent();
             Player1 = chr;
             label1.Text = Player1.NameCharacter;
+            Characters = characters;
         }
 
         public CharacterControl()
@@ -47,6 +49,7 @@ namespace DnD_Tracker.UserControls
         {
             Chr.ListOfPlayers.Remove(Player1);
             Player1 = null;
+            Characters.LoadPlayerList();
         }
     }
 }
