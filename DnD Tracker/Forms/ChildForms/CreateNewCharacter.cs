@@ -49,7 +49,7 @@ namespace DnD_Tracker.Forms.ChildForms
 
         private void btnCharacterSheet_Click(object sender, EventArgs e)
         {
-            var combinepath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "CharacterSheet");
+            var combinepath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),Campaign.CampaignName);
             if (!Directory.Exists(combinepath))
             {
                 Directory.CreateDirectory(combinepath);

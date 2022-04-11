@@ -19,10 +19,7 @@ namespace DnD_Tracker.Components
         public List<string> ListofSpells { get; set; } = new List<string>();
         public string CharacterSheetFileName { get; set; }
         #endregion
-        public Chr()
-        {
 
-        }
         public Chr(string NameChr, string NamePl, Classes cl, Races rc, List<string>Listofspells, string charactersheet)
         {
             NameCharacter = NameChr;

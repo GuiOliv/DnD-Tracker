@@ -31,6 +31,9 @@ namespace DnD_Tracker
         {
             this.label1 = new System.Windows.Forms.Label();
             this.btnNewCampaign = new System.Windows.Forms.Button();
+            this.btnOpen = new System.Windows.Forms.Button();
+            this.CampaignList = new System.Windows.Forms.ListBox();
+            this.txtCampaignName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -60,12 +63,43 @@ namespace DnD_Tracker
             this.btnNewCampaign.UseVisualStyleBackColor = false;
             this.btnNewCampaign.Click += new System.EventHandler(this.btnNewCampaign_Click);
             // 
+            // btnOpen
+            // 
+            this.btnOpen.BackColor = System.Drawing.Color.Maroon;
+            this.btnOpen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpen.Location = new System.Drawing.Point(236, 368);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(250, 48);
+            this.btnOpen.TabIndex = 2;
+            this.btnOpen.Text = "Open Campaign";
+            this.btnOpen.UseVisualStyleBackColor = false;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            // 
+            // CampaignList
+            // 
+            this.CampaignList.FormattingEnabled = true;
+            this.CampaignList.Location = new System.Drawing.Point(236, 436);
+            this.CampaignList.Name = "CampaignList";
+            this.CampaignList.Size = new System.Drawing.Size(250, 160);
+            this.CampaignList.TabIndex = 3;
+            // 
+            // txtCampaignName
+            // 
+            this.txtCampaignName.Location = new System.Drawing.Point(493, 266);
+            this.txtCampaignName.Name = "txtCampaignName";
+            this.txtCampaignName.Size = new System.Drawing.Size(159, 20);
+            this.txtCampaignName.TabIndex = 4;
+            // 
             // FirstForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DnD_Tracker.Properties.Resources.a4fb0f5276623_562b526084268;
             this.ClientSize = new System.Drawing.Size(733, 621);
+            this.Controls.Add(this.txtCampaignName);
+            this.Controls.Add(this.CampaignList);
+            this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.btnNewCampaign);
             this.Controls.Add(this.label1);
             this.Name = "FirstForm";
@@ -79,6 +113,9 @@ namespace DnD_Tracker
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnNewCampaign;
+        private System.Windows.Forms.Button btnOpen;
+        private System.Windows.Forms.ListBox CampaignList;
+        private System.Windows.Forms.TextBox txtCampaignName;
     }
 }
 

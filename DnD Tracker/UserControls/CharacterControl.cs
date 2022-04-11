@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,6 +48,7 @@ namespace DnD_Tracker.UserControls
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
+            File.Delete(Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Campaign.CampaignName), Player1.CharacterSheetFileName));
             Chr.ListOfPlayers.Remove(Player1);
             Player1 = null;
             Characters.LoadPlayerList();

@@ -1,7 +1,7 @@
 ﻿
 namespace DnD_Tracker.UserControls
 {
-    partial class CharacterControl
+    partial class MissionControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -33,31 +33,32 @@ namespace DnD_Tracker.UserControls
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnDetails = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.isCompleted = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.isCompleted);
             this.panel2.Controls.Add(this.btnRemove);
             this.panel2.Controls.Add(this.btnDetails);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panel2.Margin = new System.Windows.Forms.Padding(1);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(783, 53);
-            this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.panel2.TabIndex = 2;
             // 
             // btnRemove
             // 
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemove.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemove.Location = new System.Drawing.Point(511, 16);
-            this.btnRemove.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnRemove.Location = new System.Drawing.Point(507, 9);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(1);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(81, 24);
+            this.btnRemove.Size = new System.Drawing.Size(94, 31);
             this.btnRemove.TabIndex = 2;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
@@ -67,10 +68,10 @@ namespace DnD_Tracker.UserControls
             // 
             this.btnDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetails.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDetails.Location = new System.Drawing.Point(394, 16);
-            this.btnDetails.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnDetails.Location = new System.Drawing.Point(394, 9);
+            this.btnDetails.Margin = new System.Windows.Forms.Padding(1);
             this.btnDetails.Name = "btnDetails";
-            this.btnDetails.Size = new System.Drawing.Size(81, 24);
+            this.btnDetails.Size = new System.Drawing.Size(81, 31);
             this.btnDetails.TabIndex = 1;
             this.btnDetails.Text = "Details";
             this.btnDetails.UseVisualStyleBackColor = true;
@@ -87,13 +88,23 @@ namespace DnD_Tracker.UserControls
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
-            // CharacterControl
+            // isCompleted
+            // 
+            this.isCompleted.AutoSize = true;
+            this.isCompleted.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.isCompleted.Location = new System.Drawing.Point(516, 16);
+            this.isCompleted.Name = "isCompleted";
+            this.isCompleted.Size = new System.Drawing.Size(68, 23);
+            this.isCompleted.TabIndex = 3;
+            this.isCompleted.Text = "label2";
+            this.isCompleted.Visible = false;
+            // 
+            // MissionControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.Name = "CharacterControl";
+            this.Name = "MissionControl";
             this.Size = new System.Drawing.Size(783, 53);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -107,5 +118,6 @@ namespace DnD_Tracker.UserControls
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnDetails;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label isCompleted;
     }
 }

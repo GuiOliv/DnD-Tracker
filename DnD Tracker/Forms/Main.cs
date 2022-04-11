@@ -10,6 +10,11 @@ using System.Windows.Forms;
 using DnD_Tracker.FormsUI;
 using DnD_Tracker.Forms.ChildForms;
 using System.Runtime.InteropServices;
+using System.IO;
+using System.Reflection;
+using DnD_Tracker.Components;
+using System.Text.Json;
+using Newtonsoft.Json;
 
 namespace DnD_Tracker.Forms
 {
@@ -18,8 +23,9 @@ namespace DnD_Tracker.Forms
         private Button currentButton;
         private Random random;
         private int tempIndex;
+        public Campaign thisclass;
         public static Form activeForm { get; private set; }
-        public Main()
+        public Main(Campaign campaign)
         {
             InitializeComponent();
             random = new Random();
@@ -27,6 +33,12 @@ namespace DnD_Tracker.Forms
             this.Text = string.Empty;
             this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            var combinepath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), Campaign.CampaignName);
+            if (!Directory.Exists(combinepath))
+            {
+                Directory.CreateDirectory(combinepath);
+            }
+            thisclass = campaign;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -135,6 +147,7 @@ namespace DnD_Tracker.Forms
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+            thisclass.Serialize();
             Application.Exit();
         }
 
@@ -153,7 +166,6 @@ namespace DnD_Tracker.Forms
             this.WindowState = FormWindowState.Minimized;
         }
         #endregion
-
-        
+       
     }
 }

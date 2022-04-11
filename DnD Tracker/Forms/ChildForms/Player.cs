@@ -96,7 +96,7 @@ namespace DnD_Tracker.Forms.ChildForms
 
         private void btnOpenPDF_Click(object sender, EventArgs e)
         {
-            var combinepath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "CharacterSheet");
+            var combinepath = Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Campaign.CampaignName));
             Process.Start(Path.Combine(combinepath, Character.CharacterSheetFileName));
         }
     }

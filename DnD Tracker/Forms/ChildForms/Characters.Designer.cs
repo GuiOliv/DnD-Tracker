@@ -31,9 +31,8 @@ namespace DnD_Tracker.Forms.ChildForms
         {
             this.button1 = new System.Windows.Forms.Button();
             this.panelChild = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.characterControl1 = new DnD_Tracker.UserControls.CharacterControl();
             this.ListofPlayers = new System.Windows.Forms.FlowLayoutPanel();
+            this.characterControl1 = new DnD_Tracker.UserControls.CharacterControl();
             this.panelChild.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,10 +41,9 @@ namespace DnD_Tracker.Forms.ChildForms
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(32, 69);
-            this.button1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.button1.Location = new System.Drawing.Point(12, 29);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(451, 72);
+            this.button1.Size = new System.Drawing.Size(169, 30);
             this.button1.TabIndex = 0;
             this.button1.Text = "+ Create new Character";
             this.button1.UseVisualStyleBackColor = true;
@@ -54,45 +52,35 @@ namespace DnD_Tracker.Forms.ChildForms
             // panelChild
             // 
             this.panelChild.Controls.Add(this.ListofPlayers);
-            this.panelChild.Controls.Add(this.listView1);
-            this.panelChild.Location = new System.Drawing.Point(0, 189);
-            this.panelChild.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.panelChild.Location = new System.Drawing.Point(0, 79);
             this.panelChild.Name = "panelChild";
-            this.panelChild.Size = new System.Drawing.Size(2133, 1273);
+            this.panelChild.Size = new System.Drawing.Size(800, 534);
             this.panelChild.TabIndex = 1;
-            // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(0, 3);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(2130, 1258);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // characterControl1
-            // 
-            this.characterControl1.Location = new System.Drawing.Point(628, 29);
-            this.characterControl1.Name = "characterControl1";
-            this.characterControl1.Size = new System.Drawing.Size(1448, 150);
-            this.characterControl1.TabIndex = 2;
             // 
             // ListofPlayers
             // 
-            this.ListofPlayers.Location = new System.Drawing.Point(3, 3);
+            this.ListofPlayers.Location = new System.Drawing.Point(1, 1);
+            this.ListofPlayers.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.ListofPlayers.Name = "ListofPlayers";
-            this.ListofPlayers.Size = new System.Drawing.Size(2127, 1258);
+            this.ListofPlayers.Size = new System.Drawing.Size(798, 528);
             this.ListofPlayers.TabIndex = 3;
+            // 
+            // characterControl1
+            // 
+            this.characterControl1.Location = new System.Drawing.Point(236, 12);
+            this.characterControl1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.characterControl1.Name = "characterControl1";
+            this.characterControl1.Size = new System.Drawing.Size(543, 63);
+            this.characterControl1.TabIndex = 2;
             // 
             // Characters
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2133, 1462);
+            this.ClientSize = new System.Drawing.Size(800, 445);
             this.Controls.Add(this.characterControl1);
             this.Controls.Add(this.panelChild);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "Characters";
             this.Text = "Characters";
             this.panelChild.ResumeLayout(false);
@@ -105,7 +93,6 @@ namespace DnD_Tracker.Forms.ChildForms
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panelChild;
         private UserControls.CharacterControl characterControl1;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.FlowLayoutPanel ListofPlayers;
     }
 }
