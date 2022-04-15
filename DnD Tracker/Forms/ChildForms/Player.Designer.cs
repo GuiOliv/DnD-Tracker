@@ -55,6 +55,7 @@ namespace DnD_Tracker.Forms.ChildForms
             this.panelPDF = new System.Windows.Forms.Panel();
             this.btnOpenPDF = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.PanelStats.SuspendLayout();
             this.panelSpells.SuspendLayout();
@@ -74,13 +75,14 @@ namespace DnD_Tracker.Forms.ChildForms
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.Race);
             this.panel1.Controls.Add(this.Class);
             this.panel1.Controls.Add(this.PlayerName);
             this.panel1.Controls.Add(this.CharacterName);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(787, 77);
             this.panel1.TabIndex = 1;
@@ -131,7 +133,7 @@ namespace DnD_Tracker.Forms.ChildForms
             this.PanelStats.Controls.Add(this.label3);
             this.PanelStats.Controls.Add(this.label1);
             this.PanelStats.Location = new System.Drawing.Point(22, 88);
-            this.PanelStats.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.PanelStats.Margin = new System.Windows.Forms.Padding(1);
             this.PanelStats.Name = "PanelStats";
             this.PanelStats.Size = new System.Drawing.Size(325, 400);
             this.PanelStats.TabIndex = 2;
@@ -139,7 +141,7 @@ namespace DnD_Tracker.Forms.ChildForms
             // btnMoney
             // 
             this.btnMoney.Location = new System.Drawing.Point(284, 270);
-            this.btnMoney.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnMoney.Margin = new System.Windows.Forms.Padding(1);
             this.btnMoney.Name = "btnMoney";
             this.btnMoney.Size = new System.Drawing.Size(30, 23);
             this.btnMoney.TabIndex = 21;
@@ -150,7 +152,7 @@ namespace DnD_Tracker.Forms.ChildForms
             // btnXP
             // 
             this.btnXP.Location = new System.Drawing.Point(247, 124);
-            this.btnXP.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnXP.Margin = new System.Windows.Forms.Padding(1);
             this.btnXP.Name = "btnXP";
             this.btnXP.Size = new System.Drawing.Size(30, 23);
             this.btnXP.TabIndex = 20;
@@ -161,7 +163,7 @@ namespace DnD_Tracker.Forms.ChildForms
             // XPTextBox
             // 
             this.XPTextBox.Location = new System.Drawing.Point(186, 122);
-            this.XPTextBox.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.XPTextBox.Margin = new System.Windows.Forms.Padding(1);
             this.XPTextBox.Name = "XPTextBox";
             this.XPTextBox.Size = new System.Drawing.Size(55, 20);
             this.XPTextBox.TabIndex = 19;
@@ -186,7 +188,7 @@ namespace DnD_Tracker.Forms.ChildForms
             "+",
             "-"});
             this.comboBoxXP.Location = new System.Drawing.Point(148, 122);
-            this.comboBoxXP.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.comboBoxXP.Margin = new System.Windows.Forms.Padding(1);
             this.comboBoxXP.Name = "comboBoxXP";
             this.comboBoxXP.Size = new System.Drawing.Size(36, 21);
             this.comboBoxXP.TabIndex = 18;
@@ -194,7 +196,7 @@ namespace DnD_Tracker.Forms.ChildForms
             // MoneyTextBox
             // 
             this.MoneyTextBox.Location = new System.Drawing.Point(229, 270);
-            this.MoneyTextBox.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.MoneyTextBox.Margin = new System.Windows.Forms.Padding(1);
             this.MoneyTextBox.Name = "MoneyTextBox";
             this.MoneyTextBox.Size = new System.Drawing.Size(50, 20);
             this.MoneyTextBox.TabIndex = 16;
@@ -208,7 +210,7 @@ namespace DnD_Tracker.Forms.ChildForms
             "+",
             "-"});
             this.comboBoxMoney.Location = new System.Drawing.Point(192, 269);
-            this.comboBoxMoney.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.comboBoxMoney.Margin = new System.Windows.Forms.Padding(1);
             this.comboBoxMoney.Name = "comboBoxMoney";
             this.comboBoxMoney.Size = new System.Drawing.Size(36, 21);
             this.comboBoxMoney.TabIndex = 15;
@@ -255,7 +257,7 @@ namespace DnD_Tracker.Forms.ChildForms
             this.panelSpells.Controls.Add(this.label4);
             this.panelSpells.Controls.Add(this.label2);
             this.panelSpells.Location = new System.Drawing.Point(357, 88);
-            this.panelSpells.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panelSpells.Margin = new System.Windows.Forms.Padding(1);
             this.panelSpells.Name = "panelSpells";
             this.panelSpells.Size = new System.Drawing.Size(382, 271);
             this.panelSpells.TabIndex = 3;
@@ -324,7 +326,7 @@ namespace DnD_Tracker.Forms.ChildForms
             this.panelPDF.Controls.Add(this.btnOpenPDF);
             this.panelPDF.Controls.Add(this.label5);
             this.panelPDF.Location = new System.Drawing.Point(357, 382);
-            this.panelPDF.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panelPDF.Margin = new System.Windows.Forms.Padding(1);
             this.panelPDF.Name = "panelPDF";
             this.panelPDF.Size = new System.Drawing.Size(386, 106);
             this.panelPDF.TabIndex = 4;
@@ -351,6 +353,19 @@ namespace DnD_Tracker.Forms.ChildForms
             this.label5.TabIndex = 2;
             this.label5.Text = "Character Sheet";
             // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(12, 17);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(47, 38);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "↺";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Player
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -361,7 +376,7 @@ namespace DnD_Tracker.Forms.ChildForms
             this.Controls.Add(this.panelSpells);
             this.Controls.Add(this.PanelStats);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "Player";
             this.Text = "Player";
             this.panel1.ResumeLayout(false);
@@ -404,5 +419,6 @@ namespace DnD_Tracker.Forms.ChildForms
         private System.Windows.Forms.Button btnXP;
         private System.Windows.Forms.Button btnOpenPDF;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button2;
     }
 }

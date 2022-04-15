@@ -26,16 +26,22 @@ namespace DnD_Tracker.Forms.ChildForms
             {
                 panel.BackColor = ThemeColour.SecondaryColour;
             }
-            CharacterName.Text = Player1.NameCharacter;
-            PlayerName.Text = Player1.NamePlayer;
-            Class.Text = "Class: " + Player1.Class;
-            Race.Text = "Race: " + Player1.Race;
-            XPLoader.Text = Player1.xp.ToString();
-            MoneyLoader.Text = Player1.money.ToString();
-            LoadListofSpells(Player1.ListofSpells);
             Character = Player1;
+            FillThings();
             comboBoxMoney.SelectedIndex = -1;
             comboBoxXP.SelectedIndex = -1;
+        }
+
+        public void FillThings()
+        {
+            CharacterName.Text = Character.NameCharacter;
+            PlayerName.Text = Character.NamePlayer;
+            Class.Text = "Class: " + Character.Class;
+            Race.Text = "Race: " + Character.Race;
+            XPLoader.Text = Character.xp.ToString();
+            MoneyLoader.Text = Character.money.ToString();
+            LoadListofSpells(Character.ListofSpells);
+            Character = Character;
         }
 
         public void LoadListofSpells(List<string> list)
@@ -98,6 +104,11 @@ namespace DnD_Tracker.Forms.ChildForms
         {
             var combinepath = Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Campaign.CampaignName));
             Process.Start(Path.Combine(combinepath, Character.CharacterSheetFileName));
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FillThings();
         }
     }
 }

@@ -14,6 +14,7 @@ namespace DnD_Tracker.Forms.ChildForms
 {
     public partial class Mission : Form
     {
+        public event EventHandler Refresh;
         Msn Msn { get; set; }
         public Mission(Msn mission)
         {
@@ -57,9 +58,23 @@ namespace DnD_Tracker.Forms.ChildForms
         private void completedCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (completedCheckBox.Checked)
+            {
                 Msn.Completed = true;
+                foreach (var Players in Msn.ListofPLayersinMissions)
+                {
+                    Players.xp += Msn.XP;
+                    Players.money += Msn.Money;
+                }
+            }
             else
+            {
                 Msn.Completed = false;
+                foreach (var Players in Msn.ListofPLayersinMissions)
+                {
+                    Players.xp -= Msn.XP;
+                    Players.money -= Msn.Money;
+                }
+            }
         }
     }
 }

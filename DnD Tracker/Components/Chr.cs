@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,7 +29,8 @@ namespace DnD_Tracker.Components
             Race = rc;
             ListofSpells = Listofspells;
             CharacterSheetFileName = charactersheet;
-            ListOfPlayers.Add(this);
+            if (!ListOfPlayers.Contains(this) && NameCharacter != null)
+                ListOfPlayers.Add(this);
         }
 
         public void XPManager(string Operation, int value)
