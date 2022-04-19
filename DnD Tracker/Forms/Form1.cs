@@ -19,19 +19,23 @@ namespace DnD_Tracker
         public FirstForm()
         {
             InitializeComponent();
-            if (Directory.GetDirectories(AppDomain.CurrentDomain.BaseDirectory, "*", SearchOption.AllDirectories).Length ==0)
-            {
-                CampaignList.Visible = false;
-            }
-            else
-            {
-                foreach (var folder in Directory.GetDirectories(AppDomain.CurrentDomain.BaseDirectory, "*", SearchOption.AllDirectories))
-                {
-                    CampaignList.Items.Add(Path.GetFileName(folder));
-                }
-            }
+            LoadList();
         }
 
+        public void LoadList()
+        {
+            if (Directory.GetDirectories(AppDomain.CurrentDomain.BaseDirectory, "*", SearchOption.AllDirectories).Length == 0)
+            {
+                CampaignList.Visible = false;
+                button1.Visible = false;
+                return;
+            }
+            CampaignList.Items.Clear();
+            foreach (var folder in Directory.GetDirectories(AppDomain.CurrentDomain.BaseDirectory, "*", SearchOption.AllDirectories))
+            {
+                CampaignList.Items.Add(Path.GetFileName(folder));
+            }
+        }
         #region Buttons
         private void btnNewCampaign_Click(object sender, EventArgs e)
         {
@@ -56,7 +60,21 @@ namespace DnD_Tracker
             {
                 MessageBox.Show("Pick a campaign by clicking it on the list");
             }
+
         }
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                Directory.Delete(CampaignList.SelectedItem.ToString(), true);
+                LoadList();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("You must click on the campaign you want to delete"); ;
+            }
+        }
+
         #endregion
 
         private void OpenMainForm()
@@ -65,5 +83,12 @@ namespace DnD_Tracker
             MainForm.Show();
             this.Hide();
         }
+
+        private void FirstForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

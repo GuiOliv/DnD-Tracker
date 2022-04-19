@@ -61,8 +61,11 @@ namespace DnD_Tracker.Forms.ChildForms
             {
                 var fi = new FileInfo(dialog.FileName);
                 string path = Path.Combine(combinepath, fi.Name);
-                File.Copy(dialog.FileName, path);
-                CharacterSheetFileName = fi.Name;
+                if (!File.Exists(path))
+                {
+                    File.Copy(dialog.FileName, path);
+                    CharacterSheetFileName = fi.Name;
+                }
             }
         }
 
