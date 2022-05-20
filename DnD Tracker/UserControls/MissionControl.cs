@@ -38,6 +38,10 @@ namespace DnD_Tracker.UserControls
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
+            foreach (var item in Chr.ListOfPlayers.Where(w => w.ListofMisions.Contains(Mission)))
+            {
+                item.ListofMisions.Remove(Mission);
+            }
             Msn.ListofMissions.Remove(Mission);
             Mission = null;
             PastForm.LoadMissionList();
@@ -47,6 +51,11 @@ namespace DnD_Tracker.UserControls
         {
             Mission ms = new Mission(msn);
             ms.Show();
+        }
+
+        private void isCompleted_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

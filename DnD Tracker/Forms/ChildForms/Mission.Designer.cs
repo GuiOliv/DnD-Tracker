@@ -317,6 +317,7 @@ namespace DnD_Tracker.Forms.ChildForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(2947, 1343);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
