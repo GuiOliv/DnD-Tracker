@@ -57,6 +57,33 @@ namespace DnD_Tracker.Forms.ChildForms
 
         private void completedCheckBox_CheckedChanged(object sender, EventArgs e)
         {
+            //if (completedCheckBox.Checked)
+            //{
+            //    Msn.Completed = true;
+            //    foreach (var Players in Msn.ListofPLayersinMissions)
+            //    {
+            //        Players.xp += Msn.XP;
+            //        Players.money += Msn.Money;
+            //    }
+            //}
+            //else
+            //{
+            //    Msn.Completed = false;
+            //    foreach (var Players in Msn.ListofPLayersinMissions)
+            //    {
+            //        Players.xp -= Msn.XP;
+            //        Players.money -= Msn.Money;
+            //    }
+            //}
+        }
+
+        private void btnXP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void completedCheckBox_Click(object sender, EventArgs e)
+        {
             if (completedCheckBox.Checked)
             {
                 Msn.Completed = true;

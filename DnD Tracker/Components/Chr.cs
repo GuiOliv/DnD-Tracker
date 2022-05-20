@@ -12,6 +12,7 @@ namespace DnD_Tracker.Components
         #region Variables
         public static List<Chr> ListOfPlayers { get; set; } = new List<Chr>();
         public string NameCharacter { get; set; }
+        public List<Msn> ListofMisions { get; set; } = new List<Msn>();
         public string NamePlayer { get; set; }
         public Classes Class { get; set; }
         public Races Race { get; set; }

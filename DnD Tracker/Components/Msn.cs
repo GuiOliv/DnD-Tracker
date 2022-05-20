@@ -18,7 +18,14 @@ namespace DnD_Tracker.Components
             }
         }
         public bool Completed { get; set; } = false;
-        public List<Chr> ListofPLayersinMissions { get; set; }
+        public List<Chr> ListofPLayersinMissions
+        {
+            get
+            {
+                return Chr.ListOfPlayers.Where(w => w.ListofMisions.Contains(this)).ToList();
+            }
+        }
+       
         public int XP { get; set; }
         public int Money { get; set; }
         public string Description { get; set; }
@@ -26,7 +33,14 @@ namespace DnD_Tracker.Components
         public Msn(string name, List<Chr> chrs, int xp, int money, string description = null)
         {
             Name = name;
-            ListofPLayersinMissions = chrs;
+            if (chrs == null)
+            {
+                chrs = ListofPLayersinMissions;
+            }
+            foreach (var chr in chrs)
+            {
+                chr.ListofMisions.Add(this);
+            }
             XP = xp;
             Money = money;
             Description = description;

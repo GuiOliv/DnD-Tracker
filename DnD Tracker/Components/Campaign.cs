@@ -39,11 +39,11 @@ namespace DnD_Tracker.Components
 
         public void Deserialize(string nameCampaign)
         {
+            //var path1 = File.ReadAllText(Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, nameCampaign), nameCampaign + "_msn.json"));
+            //Msn.ListofMissions = JsonConvert.DeserializeObject<List<Msn>>(path1);
+
             var path = File.ReadAllText(Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, nameCampaign), nameCampaign + "_chr.json"));
             Chr.ListOfPlayers = JsonConvert.DeserializeObject<List<Chr>>(path);
-
-            var path1 = File.ReadAllText(Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, nameCampaign), nameCampaign + "_msn.json"));
-            Msn.ListofMissions = JsonConvert.DeserializeObject<List<Msn>>(path1);
         }
     }
 }

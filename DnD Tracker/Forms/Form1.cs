@@ -33,7 +33,13 @@ namespace DnD_Tracker
             CampaignList.Items.Clear();
             foreach (var folder in Directory.GetDirectories(AppDomain.CurrentDomain.BaseDirectory, "*", SearchOption.AllDirectories))
             {
-                CampaignList.Items.Add(Path.GetFileName(folder));
+                if (Path.GetFileName(folder) != "Resources" && Path.GetFileName(folder) != "app.publish")
+                 CampaignList.Items.Add(Path.GetFileName(folder));
+            }
+            if (CampaignList.Items.Count == 0)
+            {
+                CampaignList.Visible = false;
+                button1.Visible = false;
             }
         }
         #region Buttons
