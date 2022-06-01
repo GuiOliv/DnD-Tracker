@@ -46,7 +46,7 @@ namespace DnD_Tracker.Forms.ChildForms
         {
             try
             {
-                ListofPlayersMission.Add(Chr.ListOfPlayers[listPlayers.SelectedIndex]);
+                ListofPlayersMission.Add(Chr.ListOfPlayers.FirstOrDefault(w => w.NameCharacter == listPlayers.Text));
                 listPlayers.Items.Remove(listPlayers.SelectedItem);
                 LoadPlayerMissionList();
                 LoadPLayerList();
